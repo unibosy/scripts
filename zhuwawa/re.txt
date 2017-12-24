@@ -1,0 +1,6 @@
+width:640,height:480,fps:15,kbps:500
+
+cat re.txt | sed 's/width:\(.*\),height.*/\1/g'
+cat re.txt | sed 's/.*,height:\(.*\),fps.*/\1/g'
+cat re.txt | sed 's/.*,fps:\(.*\),kbps.*/\1/g'
+cat re.txt | sed 's/.*,kbps:\(.*\)/\1/g'
