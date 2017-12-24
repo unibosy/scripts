@@ -1,0 +1,9 @@
+PublisherConfiguration publishparam;
+publishparam.width
+publishparam.height
+publishparam.framerate
+publishparam.bitrate
+publishparam.rawStreamUrl
+publishparam.extraInfo = "{\"lowDelay\":true}";
+publishparam.lifecycle = RTMP_STREAM_LIFE_CYCLE_BIND2OWNER;
+m_lpAgoraEngine->configPublisher(publishparam);

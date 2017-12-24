@@ -1,0 +1,13 @@
+Usage:
+    ./Wawaji-RTC-Linux-Server --appId STRING --channelKey STRING --channel STRING
+    --appId       (App Id/must)
+    --uid         (User Id/option)
+    --channelKey  (ChannelKey/option)
+    --channel     (Channel Id/must)
+    --cameraId    (Select cameraId/must, equ to /dev/video(n) )
+    --logPath     (logPath/option)
+    --width       (width/option, default 640)
+    --height      (height/option, default 480)
+    --fps         (fps/option, default 15)
+    --kbps        (kbps/option, default 500)
+    --rotation    (rotation/option, [0/90/180/270], default 0)
