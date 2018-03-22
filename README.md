@@ -1,4 +1,3 @@
 # SCRIPTS
-[Google][link]
-[link]: http://www.google.com/ "Google"
+[Google](http://www.google.com/)
 | http://www.wtfpl.net/about/
