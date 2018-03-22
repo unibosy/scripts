@@ -1,3 +1,3 @@
 # SCRIPTS
-[Google](http://www.google.com/)
-| http://www.wtfpl.net/about/
+####LICENSE
+[WTFPL](http://www.wtfpl.net/about/)
