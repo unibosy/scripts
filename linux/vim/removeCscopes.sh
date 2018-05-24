@@ -1,0 +1,1 @@
+rm cscope.files cscope.in.out cscope.out cscope.po.out tags
