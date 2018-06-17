@@ -120,7 +120,7 @@ nmap <C-esc> :noh<CR>
 "nmap <C-j> I#j
 nmap <C-j> :s/^\(.*\)$/#\1/<CR>:noh<CR>j
 nmap <C-k> :s/^\#//<CR>k
-nmap <C-p> :s/^$/#!\/usr\/bin\/env python/<CR>j
+"nmap <C-p> :s/^$/#!\/usr\/bin\/env python/<CR>j
 nmap <C-e> :cs reset<CR>
 
 "vim split
@@ -207,7 +207,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'scrooloose/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -224,9 +224,17 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0
+let g:ycm_show_diagnostics_ui = 1
 
-"press enter to select 
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>" 
+"press enter to select  
+"inoremap <expr> <CR> pumvisible() ?  "\<C-Y>" : "\<CR>" 
+"let g:ycm_key_list_select_completion = ['<TAB>', '<UP>', '<DOWN>']
+"let g:ycm_key_list_previous_completion = ['<S-TAB>']
+"let g:ycm_key_list_stop_completion = ['<C-y>', '<\CR>']
+
+"let g:ycm_key_list_stop_completion = ['<CR>']
+"set completeopt-=preview
 set completeopt=longest,menu
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -235,11 +243,14 @@ nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>	"force recomile with syntastic
 " nnoremap <leader>lc :lclose<CR>	"close locationlist
 inoremap <leader><leader> <C-x><C-o>
 let g:ycm_min_num_of_chars_for_completion=2
-let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_collect_identifiers_from_tags_files=1
 "error
-let g:ycm_error_symbol = '>>'
+"let g:ycm_error_symbol = '>>'
 "Warning
-let g:ycm_warning_symbol = '>*'
+"let g:ycm_warning_symbol = '>*'
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol='✗ '
+let g:syntastic_warning_symbol='⚠ '
