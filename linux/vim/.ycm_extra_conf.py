@@ -81,6 +81,16 @@ get_python_inc(),
 
 '-isystem',
 '/usr/local/include',
+
+'-isystem',
+'/usr/include/x86_64-linux-gnu',
+
+'-I',
+'/home/unibosy/ws/recording/ServerSDK-Video/include',
+
+'-isystem',
+'/usr/include/c++/5',
+
 ]
 
 # Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,
